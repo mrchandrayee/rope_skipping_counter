@@ -1,0 +1,38 @@
+run:
+  source: 0
+  output: runs/rope_skipping
+  show: true
+  save_video: true
+  device: null
+  imgsz: 960
+  confidence: 0.25
+pose:
+  model: yolo11n-pose.pt
+  person_class: 0
+  keypoint_confidence: 0.30
+  smoothing: 0.65
+  jump_threshold_px: 22
+  min_jump_interval_frames: 5
+  cooldown_frames: 8
+  count_mode: ankle                  # ankle | hip | box
+floor:
+  grid_lines: []
+  # Example line segments: [[[50,450],[300,300]], [[300,300],[580,450]]]
+  vanishing_point: null
+  end_line: null
+  draw_grid: true
+  grid_color: [0, 220, 255]
+  floor_height_ref: null
+  # Example:
+  # floor_height_ref:
+  #   base: [310, 430]
+  #   top: [310, 300]
+  #   height_m: 1.0
+  #   foot_xz: [0.0, 0.0]
+hud:
+  title: Rope Skipping
+  x: 12
+  y: 12
+  width: 300
+  show_fps: true
+  show_jumps: true
